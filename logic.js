@@ -6,6 +6,12 @@ let field = [
   ['', '', '']
 ];
 
+let emptyField = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+
 let stepCount = 0;
 
 function startGame() {
@@ -13,6 +19,12 @@ function startGame() {
   activePlayer = 'x';
 
   renderBoard(field);
+
+  field = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
 }
 
 function click(row, col) {

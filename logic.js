@@ -1,5 +1,5 @@
 let players = ['x', 'o'];
-let activePlayer = '';
+let activePlayer = 0;
 let field = [
   ['', '', ''],
   ['', '', ''],
@@ -40,10 +40,9 @@ function click(row, col) {
       || ((field[0][0] === activePlayer) && (field[1][1] === activePlayer) && (field[2][2] === activePlayer)) 
       || ((field[0][2] === activePlayer) && (field[1][1] === activePlayer) && (field[2][0] === activePlayer)) ) {
         showWinner(activePlayer);
-        } else { 
-      changePlayer();
-    }
+        } 
   }
+  changePlayer();
   renderBoard(field);
 }
 
